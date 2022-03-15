@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Neutral colors*/
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+
+    /* Primary colors*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+/* Main styles */
+body {
+    font-size: 15px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+/* Text Styles*/
+
+p {
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.6;
+    padding-bottom: 1.5em;
+}
+
+h1 {
+    color: var(--background-headings-buttons);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    padding: 1em 0em 1em 0em;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+}
+
+/* Columns*/
+
+.column1, .column2, .column3 {
+    padding: 2.5em;
+}
+
+.column1 {
+    background-color: var(--bright-orange);
+    border-radius: 0.5em 0.5em 0em 0em;
+}
+
+.column2 {
+    background-color: var(--dark-cyan);
+}
+
+.column3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0em 0em 0.5em 0.5em;
+}
+
+/* Buttons */
+
+button {
+    padding: 1em 2em;
+    border-radius: 2em;
+    border: none;
+    font-family: 'Lexend Deca';
+}
+
+.column1 button {
+    color: var(--bright-orange);
+    font-weight: bold;
+}
+
+.column2 button {
+    color: var(--dark-cyan);
+    font-weight: bold;
+}
+
+.column3 button {
+    color: var(--very-dark-cyan);
+    font-weight: bold;
+}
+
+/* Button Interactivity */
+button:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.column1 button:hover {
+    color: var(--background-headings-buttons);
+    background-color: var(--bright-orange);  
+}
+
+.column2 button:hover {
+    color: var(--background-headings-buttons);
+    background-color: var(--dark-cyan);  
+}
+
+.column3 button:hover {
+    color: var(--background-headings-buttons);
+    background-color: var(--very-dark-cyan);  
+}
+
+/* Attribution */
+.attribution p { 
+    font-size: 11px; 
+    text-align: center;
+    color: black; 
+    padding-top: 2em;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 50%;
+    }
+    button {
+        margin: 2em 0 2em 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+    }
+    .column1, .column2, .column3 {
+        width: 284px;
+    }
+    .column1 {
+        border-radius: 0.5em 0em 0em 0.5em;
+    }
+    .column3 {
+        border-radius: 0em 0.5em 0.5em 0em;
+    }
+}
